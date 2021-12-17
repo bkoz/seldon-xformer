@@ -26,7 +26,7 @@ curl -d 'json={"data":{"ndarray":[[7.0,14.0]]}}' http://0.0.0.0:9001/transform-i
 
 Client test
 ```
-$ python container_test.py
+python container_test.py
 ```
 
 Example output
