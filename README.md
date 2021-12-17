@@ -19,9 +19,9 @@ sudo docker run -d --rm --name "double-transformer" -p 9001:9000 double-transfor
 
 Curl test
 ```
-$ curl -d 'json={"data":{"ndarray":[[7.0,14.0]]}}' http://0.0.0.0:9001/transform-output
+curl -d 'json={"data":{"ndarray":[[7.0,14.0]]}}' http://0.0.0.0:9001/transform-input
 
-{"data":{"names":["t:0","t:1"],"ndarray":[[7.0,14.0]]},"meta":{}}
+{"data":{"names":["t:0","t:1"],"ndarray":[[14.0,28.0]]},"meta":{}}
 ```
 
 Client test
