@@ -6,7 +6,7 @@ Usage test
 sudo s2i usage seldonio/seldon-core-s2i-python3:1.7.0-dev
 ```
 
-Build the transformer container image using [s2i](http://redhat.com/s2i)
+Build the transformer container image using [s2i](https://github.com/openshift/source-to-image#installation)
 
 ```
 sudo s2i build . seldonio/seldon-core-s2i-python3:1.12.0-dev double-transformer:0.1
@@ -76,6 +76,10 @@ Clean up.
 sudo docker stop double-transformer
 sudo docker rm double-transformer
 ```
+
+References
+
+[Seldon Transformers](https://docs.seldon.io/projects/seldon-core/en/latest/python/python_wrapping_s2i.html#environment-variables)
 
 How to re-create from scratch.
 
