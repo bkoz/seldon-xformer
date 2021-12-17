@@ -79,36 +79,6 @@ sudo docker rm double-transformer
 
 References
 
-[Seldon Transformers](https://docs.seldon.io/projects/seldon-core/en/latest/python/python_wrapping_s2i.html#environment-variables)
+[Seldon s2i environment variables](https://docs.seldon.io/projects/seldon-core/en/latest/python/python_wrapping_s2i.html#environment-variables)
 
-How to re-create from scratch.
-
-```
-mkdir .s2i
-
-echo numpy > requirements.txt
-```
-
-```
-cat >> DoubleTransformer.py <<EOF
-import numpy as np
-
-class DoubleTransformer(object):
-
-   def __init__(self):
-       pass
-
-   def transform_input(self, X, feature_names):
-       X = np.array(X)
-       return X * 2
-EOF
-```
-
-```
-cat >> .s2i/environment <<EOF
-MODEL_NAME=DoubleTransformer
-SERVICE_TYPE=TRANSFORMER
-PERSISTENCE=0
-EOF
-```
 
